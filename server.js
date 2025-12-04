@@ -8,6 +8,7 @@ const app = express(); // Padrao para inicar o servidor a partir da constante ap
 
 app.use(express.json()); // Por padrao o node nao usa JSON, nessa linha a gente garante que ele vai usar
 
+// Criar um usuario
 app.post('/users', async (req, res) => { // Tudo que passa com req, sao coisas que vem da request, e no res, o que o servidor vai retornar a partir da req
 
     const {email, name, age} = req.body;
